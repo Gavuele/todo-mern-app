@@ -5,7 +5,7 @@ const Popup = ({ setShowPopup, popupContent, setUpdateUI }) => {
   const [input, setInput] = useState(popupContent.text);
 
   const updateToDo = () => {
-    axios.put(`https://todo-mern-app-backend-fgxm.onrender.com/api/update/${popupContent.id}`, { toDo: input })
+    axios.put(`https://todo-mern-app-backend-tt8c.onrender.com/api/update/${popupContent.id}`, { toDo: input })
       .then((res) => {
         console.log(res.data);
         setUpdateUI((prevState) => !prevState);

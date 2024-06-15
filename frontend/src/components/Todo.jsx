@@ -2,7 +2,7 @@ import axios from "axios";
 
 const Todo = ({ text, id, setUpdateUI, setShowPopup, setPopupContent }) => {
   const deleteTodo = () => {
-    axios.delete(`https://todo-mern-app-backend-fgxm.onrender.com/api/delete/${id}`)
+    axios.delete(`https://todo-mern-app-backend-tt8c.onrender.com/${id}`)
       .then((res) => {
         console.log(res.data);
         setUpdateUI((prevState) => !prevState);
