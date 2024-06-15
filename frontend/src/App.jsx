@@ -11,13 +11,13 @@ const App = () => {
   const [popupContent, setPopupContent] = useState({});
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/get`)
+    axios.get(`https://todo-mern-app-backend-fgxm.onrender.com/api/get`)
       .then((res) => setToDos(res.data))
       .catch((err) => console.log(err));
   }, [updateUI]);
 
   const saveToDo = () => {
-    axios.post(`http://localhost:5000/api/save`, { toDo: input })
+    axios.post(`https://todo-mern-app-backend-fgxm.onrender.com/api/save`, { toDo: input })
       .then((res) => {
         console.log(res.data);
         setUpdateUI((prevState) => !prevState);
